@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: OpenAPI Example
+  description: OpenAPI Example
+  version: 0.0.0
+paths:
+  /test:
+    get:
+      description: test
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/get_test_response'
+components:
+  schemas:
+    get_test_response:
+      description: サーバーの状態のレスポンス
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+            - ok
+      required:
+        - status
