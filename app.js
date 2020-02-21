@@ -5,7 +5,11 @@ app.get('/', function(req, res) {
 })
 
 app.get('/test', function(req, res) {
-  res.json({status: 111})
+  res.json({status: 'ok1'})
+})
+
+app.post('/test', function(req, res) {
+  res.status(201).json({status: 'ok'})
 })
 
 app.listen(3000)

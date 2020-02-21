@@ -6,18 +6,25 @@ info:
 paths:
   /test:
     get:
-      description: test
       responses:
-        '200':
+        "200":
           description: ok
           content:
             application/json; charset=utf-8:
               schema:
-                $ref: '#/components/schemas/get_test_response'
+                $ref: "#/components/schemas/get_test_response"
+    post:
+      responses:
+        "201":
+          description: ok
+          content:
+            application/json; charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/get_test_response"
 components:
   schemas:
     get_test_response:
-      description: サーバーの状態のレスポンス
+      description: ok
       type: object
       properties:
         status:

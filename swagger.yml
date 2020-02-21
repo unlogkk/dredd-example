@@ -1,0 +1,34 @@
+swagger: "2.0"
+info:
+  title: OpenAPI Example
+  description: OpenAPI Example
+  version: 0.0.0
+paths:
+  /test:
+    get:
+      produces:
+        - application/json; charset=utf-8    
+      responses:
+        '200':
+          description: ok
+          schema:
+            $ref: '#/definitions/get_test_response'
+    post:
+      produces:
+        - application/json; charset=utf-8    
+      responses:
+        '201':
+          description: ok
+          schema:
+            $ref: '#/definitions/get_test_response'
+definitions:
+  get_test_response:
+    description: ok
+    type: object
+    properties:
+      status:
+        type: string
+        enum:
+          - ok
+    required:
+      - status
